@@ -38,24 +38,16 @@ uv pip install --python .\.venv\Scripts\python.exe qiskit "qiskit[visualization]
 
 ## 5단계. Claude에게 이어서 부탁하기
 
-새 대화를 열고 아래 내용을 복사해서 붙여넣기 (`모듈 N`만 바꾸기):
-
-```
-qiskit-study 저장소로 교재 Qiskit 실습 중이야. (github.com/ten-infosec/qiskit-study)
-환경: Windows + VS Code, .venv (파이썬 3.14.6), qiskit 2.5.2 + qiskit-aer.
-실행은 .\.venv\Scripts\python.exe 파일이름.py 로 해.
-교재 코드는 오타가 많고 옛날 Qiskit 문법이라 Qiskit 2.x로 고쳐가며 실습 중이야.
-지금 할 차례는 [모듈 N]이야. docs/curriculum.md 내용을 붙여줄게:
-(여기에 curriculum.md의 해당 모듈 부분 붙여넣기)
-교재 해당 페이지 사진도 같이 보낼게. 차근차근 안내해줘.
-```
-→ 교재 사진은 저장소에 없으니(저작권) 휴대폰 사진첩에서 해당 페이지를 함께 보내기.
+[NEXT-PROMPT.md](NEXT-PROMPT.md)를 열고, 회색 상자 안 프롬프트를 복사해서 새 대화에 붙여넣기.
+→ 교재 해당 페이지 사진도 함께 보내기 (저작권 때문에 저장소에는 없음 — 바탕화면 `qiskit_image.zip` 또는 휴대폰 사진첩)
+→ 프롬프트는 NEXT-PROMPT.md 한 곳에서만 관리한다
 
 ## 6단계. 공부 끝나면 기록하고 올리기
 
-1. `notes/log.md`에 오늘 한 것, 막힌 것, 다음 할 것 적기
+1. `notes/log.md`에 오늘 한 것, 배운 것, 다음 할 것 적기
 2. README 체크리스트 업데이트 (`- [ ]` → `- [x]`, 상태 표 ⬜ → ✅)
-3. 올리기:
+3. **NEXT-PROMPT.md의 [현재 진행 상황]과 [이번에 할 것]을 다음 모듈로 업데이트**
+4. 올리기:
 
 ```powershell
 git status

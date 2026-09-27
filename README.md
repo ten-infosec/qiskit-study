@@ -10,7 +10,8 @@ PQC(양자내성암호) 커리큘럼 **Stage 7 (QKD, 양자키분배)** 의 BB84
 
 | 파일 | 내용 |
 |---|---|
-| [docs/HOW-TO-RESUME.md](docs/HOW-TO-RESUME.md) | **다음에 이어서 공부할 때 여기부터 보기** (환경 확인, 실행 방법, Claude에게 줄 프롬프트) |
+| [docs/NEXT-PROMPT.md](docs/NEXT-PROMPT.md) | **⭐ 다음에 시작할 때 Claude에게 붙여넣을 프롬프트** |
+| [docs/HOW-TO-RESUME.md](docs/HOW-TO-RESUME.md) | 다음에 이어서 공부하는 순서 (환경 확인, 실행 방법, 끝나고 올리는 법) |
 | [docs/curriculum.md](docs/curriculum.md) | 모듈별 상세 계획 — 교재 페이지, 할 일, 고쳐야 할 점, 확인 포인트 |
 | [notes/log.md](notes/log.md) | 날짜별 학습 기록 |
 
@@ -18,16 +19,16 @@ PQC(양자내성암호) 커리큘럼 **Stage 7 (QKD, 양자키분배)** 의 BB84
 
 - Windows + VS Code
 - 가상환경: `.venv` (파이썬 3.14.6, uv로 설치한 파이썬 기반)
-- 패키지: `qiskit` 2.5.2, `qiskit[visualization]`, `qiskit-aer` (모듈 5부터 `qiskit-ibm-runtime` 추가 예정)
+- 패키지: `qiskit` 2.5.2, `qiskit-aer` 0.17.2, `matplotlib` 3.11.2 (모듈 5부터 `qiskit-ibm-runtime` 추가 예정)
 - 실행: `.\.venv\Scripts\python.exe 파일이름.py`
 
 ## 🗺 커리큘럼 한눈에 보기
 
 | 모듈 | 주제 | 교재 | 상태 |
 |---|---|---|---|
-| 0 | 환경 준비 (시각화·Aer 설치) | p.188 | 🔄 진행 중 |
-| 1 | 첫 양자회로: H → barrier → H | p.188 | ⬜ |
-| 2 | BB84 — 도청 없음 (seed 0) | p.189~191 | ⬜ |
+| 0 | 환경 준비 (시각화·Aer 설치) | p.188 | ✅ |
+| 1 | 첫 양자회로: H → barrier → H | p.188 | ✅ |
+| 2 | BB84 — 도청 없음 (seed 0) | p.189~191 | 🔄 다음 |
 | 3 | BB84 — 도청 있음 (seed 4) | p.191 | ⬜ |
 | 4 | 상태벡터·유니터리·블로흐 구·GHZ | p.192~199 | ⬜ |
 | 5 | BV 알고리즘과 fidelity 비교 | p.212~217 | ⬜ |
@@ -41,10 +42,10 @@ PQC(양자내성암호) 커리큘럼 **Stage 7 (QKD, 양자키분배)** 의 BB84
 ## ✅ 진행 체크리스트
 
 - [x] `step1_bell.py` — StatevectorSampler로 벨 상태 실행 (`{'00': 517, '11': 483}`)
-- [ ] 모듈 0 — `qiskit[visualization]`, `qiskit-aer` 설치 및 버전 확인
-- [ ] 모듈 1 — `aer_basics.py` 실행 (`{'0': 1024}` 확인)
+- [x] 모듈 0 — `qiskit[visualization]`, `qiskit-aer` 설치 및 버전 확인
+- [x] 모듈 1 — `aer_basics.py` 실행 (`{'0': 1024}`, 밥의 H 빼면 `{'0': 522, '1': 502}`)
 - [x] 모듈 2 — 내 `BB84.py` 실행 결과 확인 (0.0% / 19.4%)
-- [ ] 모듈 2 — 교재 BB84 코드 수정·실행
+- [ ] 모듈 2 — 교재 BB84 코드 수정·실행 (encode / decode / generate_encryption_key, seed 0)
 - [ ] 모듈 3 — 도청 버전 실행, 교재 구조의 문제점 실험
 - [ ] 모듈 4 — 상태벡터·유니터리·블로흐 구·GHZ
 - [ ] 모듈 5 — BV 알고리즘 + fidelity 그래프
