@@ -1,8 +1,8 @@
 # qiskit-study
 
 양자 컴퓨팅 → 암호(RSA·PQC) → QKD → 위성 보안으로 이어지는 학습 저장소입니다.
-교재(양자컴퓨팅 교재 p.188~229)의 Qiskit 예제를 **Qiskit 2.x + qiskit-aer** 기준으로 고쳐가며 실습하고, 개념 로드맵(Q1~Q6)을 함께 공부합니다.
-PQC(양자내성암호) 커리큘럼 **Stage 7 (QKD · QRNG)** 의 BB84 실습에서 시작했고, Q1~Q6은 그 양자 부분을 깊게 파고드는 가지입니다. (PQC 커리큘럼과의 관계는 [curriculum.md](docs/curriculum.md) 앞부분 참고)
+교재(양자컴퓨팅 교재 p.188\~229)의 Qiskit 예제를 **Qiskit 2.x + qiskit-aer** 기준으로 고쳐가며 실습하고, 개념 로드맵(Q1\~Q6)을 함께 공부합니다.
+PQC(양자내성암호) 커리큘럼 **Stage 7 (QKD · QRNG)** 의 BB84 실습에서 시작했고, Q1\~Q6은 그 양자 부분을 깊게 파고드는 가지입니다. (PQC 커리큘럼과의 관계는 [curriculum.md](docs/curriculum.md) 앞부분 참고)
 
 > 교재 코드는 오타가 많고 Qiskit 1.0 이전의 옛날 문법이라 그대로는 실행되지 않습니다.
 > 이 저장소에는 **교재를 그대로 옮기지 않고**, 직접 고친 코드와 학습 기록만 남깁니다.
@@ -11,7 +11,7 @@ PQC(양자내성암호) 커리큘럼 **Stage 7 (QKD · QRNG)** 의 BB84 실습�
 
 | 파일 | 내용 |
 |---|---|
-| [docs/curriculum.md](docs/curriculum.md) | **⭐ 전체 커리큘럼** — 개념 로드맵(Q1~Q6) + 교재 실습 모듈(0~9) 통합 |
+| [docs/curriculum.md](docs/curriculum.md) | **⭐ 전체 커리큘럼** — 개념 로드맵(Q1\~Q6) + 교재 실습 모듈(0\~9) 통합 |
 | [docs/NEXT-PROMPT.md](docs/NEXT-PROMPT.md) | 다음에 시작할 때 Claude에게 붙여넣을 프롬프트 |
 | [docs/HOW-TO-RESUME.md](docs/HOW-TO-RESUME.md) | 다음에 이어서 공부하는 순서 (환경 확인, 실행 방법, 끝나고 올리는 법) |
 | [notes/log.md](notes/log.md) | 날짜별 학습 기록 |
