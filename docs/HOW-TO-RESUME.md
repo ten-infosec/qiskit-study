@@ -32,21 +32,23 @@ uv pip install --python .\.venv\Scripts\python.exe qiskit "qiskit[visualization]
 
 ## 4단계. 어디까지 했는지 확인
 
-1. [README.md](../README.md)의 **진행 체크리스트**에서 체크 안 된 첫 항목 찾기
-2. [curriculum.md](curriculum.md)에서 해당 모듈의 "할 일" 읽기
-3. [notes/log.md](../notes/log.md)에서 마지막 기록 읽기
+1. [README.md](../README.md)의 **커리큘럼 한눈에 보기**에서 지금 Q 몇 단계, 모듈 몇 번인지 확인
+2. [README.md](../README.md)의 **진행 체크리스트**에서 체크 안 된 첫 항목 찾기
+3. [curriculum.md](curriculum.md)에서 해당 Q 단계의 개념 목록과 해당 모듈의 "할 일" 읽기
+4. [notes/log.md](../notes/log.md)에서 마지막 기록 읽기
 
 ## 5단계. Claude에게 이어서 부탁하기
 
 [NEXT-PROMPT.md](NEXT-PROMPT.md)를 열고, 회색 상자 안 프롬프트를 복사해서 새 대화에 붙여넣기.
 → 교재 해당 페이지 사진도 함께 보내기 (저작권 때문에 저장소에는 없음 — 바탕화면 `qiskit_image.zip` 또는 휴대폰 사진첩)
+→ 필요하면 `curriculum.md`의 해당 모듈 부분도 복사해서 같이 보내기
 → 프롬프트는 NEXT-PROMPT.md 한 곳에서만 관리한다
 
 ## 6단계. 공부 끝나면 기록하고 올리기
 
 1. `notes/log.md`에 오늘 한 것, 배운 것, 다음 할 것 적기
 2. README 체크리스트 업데이트 (`- [ ]` → `- [x]`, 상태 표 ⬜ → ✅)
-3. **NEXT-PROMPT.md의 [현재 진행 상황]과 [이번에 할 것]을 다음 모듈로 업데이트**
+3. **NEXT-PROMPT.md의 [로드맵 위치], [현재 진행 상황], [이번에 할 것]을 다음 단계로 업데이트**
 4. 올리기:
 
 ```powershell
