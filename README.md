@@ -1,19 +1,26 @@
 # qiskit-study
 
+## ▶ 다음 할 일
+
+**모듈 2-1** 교재 BB84 encode_message → 자세한 내용과 Claude용 프롬프트는 [NEXT-PROMPT.md](guide/NEXT-PROMPT.md)
+(시간이 20\~30분뿐이면: QRNG 만들기)
+
+---
+
 양자 컴퓨팅 → 암호(RSA·PQC) → QKD → 위성 보안으로 이어지는 학습 저장소입니다.
 교재(양자컴퓨팅 교재 p.188\~229)의 Qiskit 예제를 **Qiskit 2.x + qiskit-aer** 기준으로 고쳐가며 실습하고, 개념 로드맵(Q1\~Q6)을 함께 공부합니다.
-PQC(양자내성암호) 커리큘럼 **Stage 7 (QKD · QRNG)** 의 BB84 실습에서 시작했고, Q1\~Q6은 그 양자 부분을 깊게 파고드는 가지입니다. (PQC 커리큘럼과의 관계는 [curriculum.md](docs/curriculum.md) 앞부분 참고)
+PQC(양자내성암호) 커리큘럼 **Stage 7 (QKD · QRNG)** 의 BB84 실습에서 시작했고, Q1\~Q6은 그 양자 부분을 깊게 파고드는 가지입니다. (PQC 커리큘럼과의 관계는 [curriculum.md](guide/curriculum.md) 앞부분 참고)
 
 > 교재 코드는 오타가 많고 Qiskit 1.0 이전의 옛날 문법이라 그대로는 실행되지 않습니다.
 > 이 저장소에는 **교재를 그대로 옮기지 않고**, 직접 고친 코드와 학습 기록만 남깁니다.
 
-## 📂 문서 안내
+## 📂 가이드 (guide 폴더)
 
-| 파일 | 내용 |
+| 파일 | 역할 |
 |---|---|
-| [docs/curriculum.md](docs/curriculum.md) | **⭐ 전체 커리큘럼** — 개념 로드맵(Q1\~Q6) + 교재 실습 모듈(0\~9) 통합 |
-| [docs/NEXT-PROMPT.md](docs/NEXT-PROMPT.md) | 다음에 시작할 때 Claude에게 붙여넣을 프롬프트 |
-| [docs/HOW-TO-RESUME.md](docs/HOW-TO-RESUME.md) | 다음에 이어서 공부하는 순서 (환경 확인, 실행 방법, 끝나고 올리는 법) |
+| [guide/curriculum.md](guide/curriculum.md) | **전체 계획** — 개념 로드맵(Q1\~Q6) + 교재 실습 모듈(0\~9) |
+| [guide/HOW-TO-RESUME.md](guide/HOW-TO-RESUME.md) | **시작하고 끝내는 법** — 환경 확인, 실행, 기록, 올리기 |
+| [guide/NEXT-PROMPT.md](guide/NEXT-PROMPT.md) | **다음에 할 일 상세** — Claude에게 붙여넣을 프롬프트 |
 | [notes/log.md](notes/log.md) | 날짜별 학습 기록 |
 
 ## 🛠 개발 환경
@@ -25,18 +32,18 @@ PQC(양자내성암호) 커리큘럼 **Stage 7 (QKD · QRNG)** 의 BB84 실습�
 
 ## 🗺 커리큘럼 한눈에 보기
 
-**개념 로드맵 (Q1~Q6)** — 자세한 개념 목록은 [curriculum.md Part 1](docs/curriculum.md#part-1-개념-로드맵-q1q6)
+**개념 로드맵 (Q1~Q6)** — 자세한 개념 목록은 [curriculum.md Part 1](guide/curriculum.md#part-1-개념-로드맵-q1q6)
 
 | 단계 | 주제 | 관련 실습 모듈 | 상태 |
 |---|---|---|---|
-| Q1 | 수학 언어 (디랙 표기법, 선형대수, 텐서곱) | 4, 8 | 🔄 시작 |
+| Q1 | 수학 언어 (디랙 표기법, 선형대수, 텐서곱) | 4, 8 | 🔄 진행 중 |
 | Q2 | 물리 직관 (양자역학 가설, 측정, 광자, 블로흐 구) | 0~1, 4, 8 | ⬜ |
 | Q3 | 게이트·얽힘·알고리즘 입문 (도이치, BV, 그로버) | 4, 5, 7 | ⬜ |
 | Q4 | 쇼어 알고리즘과 양자 위협 (→ PQC는 Stage 6) | 새 모듈 추가 예정 | ⬜ |
 | Q5 | 양자 오류와 오류 정정 | 5, 6, 7, 9 | ⬜ |
 | Q6 | QKD·QRNG 심화와 위성 보안 | 2, 3 | ⬜ |
 
-**교재 실습 모듈 (0~9)** — 자세한 할 일은 [curriculum.md Part 2](docs/curriculum.md#part-2-교재-실습-모듈-상세-모듈-09)
+**교재 실습 모듈 (0~9)** — 자세한 할 일은 [curriculum.md Part 2](guide/curriculum.md#part-2-교재-실습-모듈-상세-모듈-09)
 
 | 모듈 | 주제 | 교재 | 로드맵 | 상태 |
 |---|---|---|---|---|
@@ -60,6 +67,8 @@ PQC(양자내성암호) 커리큘럼 **Stage 7 (QKD · QRNG)** 의 BB84 실습�
 - [x] 모듈 0 — `qiskit[visualization]`, `qiskit-aer` 설치 및 버전 확인
 - [x] 모듈 1 — `aer_basics.py` 실행 (`{'0': 1024}`, 밥의 H 빼면 `{'0': 522, '1': 502}`)
 - [x] 모듈 2 — 내 `BB84.py` 실행 결과 확인 (0.0% / 19.4%)
+- [x] Q1 — `q1_gates.py` NumPy로 X, Z, H 게이트 행렬 만들고 Qiskit과 비교
+- [ ] Q6 — QRNG 만들기 (H 게이트 측정으로 난수 생성)
 - [ ] 모듈 2 — 교재 BB84 코드 수정·실행 (encode / decode / generate_encryption_key, seed 0)
 - [ ] 모듈 3 — 도청 버전 실행, 교재 구조의 문제점 실험
 - [ ] 모듈 4 — 상태벡터·유니터리·블로흐 구·GHZ
