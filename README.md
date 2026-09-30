@@ -1,4 +1,4 @@
-# qiskit-study
+# quantum-study
 
 ## ▶ 다음 할 일
 
