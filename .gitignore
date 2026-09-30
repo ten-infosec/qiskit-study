@@ -19,3 +19,6 @@ textbook-photos/
 
 # VS Code 개인 설정
 .vscode/
+
+# 교재 사진 (저작권 - 업로드 금지)
+qiskit_image*.zip
